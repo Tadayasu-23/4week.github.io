@@ -1,0 +1,75 @@
+.welcome-section {
+    background: url("~images/bg/Train.jpg") center top / cover no-repeat;
+    padding-bottom: 135px;
+    @media (min-width: 1940px) {
+      background-position: center bottom;
+      background-attachment: local;
+    }
+    @include desktop {
+        background: url("~images/bg/Train1200.png") center top / cover no-repeat;
+    }
+    @include tablets {
+        background: url("~images/bg/Train768.jpg") center top / contain no-repeat;
+        padding-bottom: 0px;
+    }
+    @include phones {
+      background: url("~images/bg/Train768.jpg") center top / 160% auto no-repeat;
+    }
+    @media (max-width: 320px) {
+      background: url("~images/bg/Train768.jpg") center top / 140% auto no-repeat;
+    }
+}
+
+.middle-section {
+    position: relative;
+    padding: 0 0 200px;
+    overflow-y: visible;
+    @include tablets {
+      padding: 0 0 115px;
+    }
+}
+
+.middle-section__triangles-top {
+    height: 100px;
+    position: absolute;
+    bottom: 100%;
+    width: 100%;
+}
+  
+.middle-section__triangles-bottom {
+    height: 100px;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+}
+
+.reviews {
+    background: url('~images/bg/forest1800.jpg') top center / cover no-repeat;
+    padding: 250px 0 200px;
+    @include tablets {
+      padding: 125px 0 150px;
+    }
+    @include phones {
+      padding: 70px 0 60px;
+    }
+  }
+  
+  @media screen and (max-width: 1250px) {
+    .review__container {
+      width: 85vw;
+    }
+  }
+  @include tablets {
+    .review__container {
+      width: 90vw;
+    }
+  }
+  @include phones {
+    .review__container {
+      width: 85vw;
+    }
+}
+
+
+  
+  

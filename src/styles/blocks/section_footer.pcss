@@ -1,0 +1,135 @@
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    @include tablets {
+      width: 90vw;
+    }
+    @include phones {
+      width: 80vw;
+      flex-direction: column;
+    }
+}
+  
+.footer {
+    background: #1f232d;
+    padding: 88px 0;
+    color: rgba(#fff, .3);
+    line-height: 1.7;
+    @include tablets {
+      padding: 45px 0;
+    }
+}
+
+  
+.footer__copyright {
+    width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    color: rgba(#fff, .1);
+    flex-direction: column;
+    flex: 1; 
+}
+
+  @media (min-width: 1800px) {
+    .footer__copyright {
+      flex-direction: row;
+    }
+  }
+  @include phones {
+    .footer__copyright {
+      width: 100%;
+    }
+}
+
+
+  
+.footer__copyright-col {}
+  
+.footer__copyright-userinfo {
+    max-width: 250px;
+    width: 60%;
+    padding-top: 9px;
+    display: inline-block;
+}
+  
+.footer__copyright-name {
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 34px;
+}
+
+  
+.footer__copyright-year {
+    font-weight: 600;
+    font-size: 48px;
+    white-space: nowrap;
+    margin-right: 50px;
+}
+  
+.footer__data-text {
+    margin-bottom: 25px;
+    color: rgba(#fff, .3);
+    font-size: 16px;
+}
+  
+.footer__data {
+    width: 66%;
+    padding-top: 7px;
+    flex: 2;
+    @include phones {
+      width: 100%;
+      font-size: 18px;
+    }
+}
+  
+.footer__data-menu {
+    margin-bottom: 60px;
+    .menu__list {
+      justify-content: space-between;
+      align-content: flex-end;
+      @include tablets {
+        width: 90%;
+      }
+      
+    }
+    .menu__item {
+      margin-right: 6%;
+    }
+}
+  
+.footer__data-content {
+    display: flex;
+    justify-content: space-between;
+    @include tablets {
+      flex-direction: column;
+      width: 90%;
+    }
+}
+  
+.footer__data-col {
+    width: 46%;
+    @include tablets {
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 50px;
+    }
+}
+  
+.footer__data-content  .socials {
+    display: flex;
+}
+
+.text-quote__text {
+  margin-bottom: 35px;
+  @include tablets {
+    margin-bottom: 15px;
+  }
+}
+
+.text-quote__author {
+  color: #fff;
+  font-style: italic;
+}

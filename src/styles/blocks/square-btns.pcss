@@ -1,0 +1,69 @@
+.square-btns {
+  display: flex;
+  min-height: 50px;
+  transform: rotate(90deg);
+  transform-origin: right bottom;
+  @include phones {
+    min-height: 100px;
+  }
+}
+
+.square-btns__item {
+  width: 50%;
+  background: #2d3c4e;
+  display: block;
+  position: relative;
+
+  @include phones {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 100px;
+  }
+
+  &:before {
+    content: "";
+    background: svg-load('arrow-down.svg', fill=#fff, width=100%, height=100%) center center no-repeat;
+    display: block;
+    width: 8px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    transition: opacity .5s, margin-top .3s;
+    opacity: .5;
+    @include phones {
+      width: 28px;
+      height: 36px;
+    }
+  }
+  &:hover {
+    &:before {
+      opacity: 1;
+      transform: scale(1.5) translate(-25%, -40%) rotate(-90deg);
+    }
+  }
+  &--prev {
+    &:hover {
+      transform: rotate(-180deg);
+    }
+    &:before {
+      transform: translate(-50%, -50%) rotate(-270deg);
+    }
+    &:active {
+      &:before {
+        margin-top: -3px;
+      }
+    }
+  }
+  &--next {
+    &:active {
+      &:before {
+        margin-top: -3px;
+      }
+    }
+  }
+}
+
+@include phones {
+
+}

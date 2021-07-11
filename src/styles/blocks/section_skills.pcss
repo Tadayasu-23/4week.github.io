@@ -1,0 +1,194 @@
+.values {
+    position: relative;
+    background: url('~images/bg/tree.jpg') top left / cover;
+    padding: 130px 0 50px;
+    margin: 0 0 200px;
+    z-index: -2;
+    @include tablets {
+      padding: 90px 0 480px;
+      margin: 0 0 120px;
+    }
+    @include phones {
+      padding: 90px 0 310px;
+    }
+}
+  
+.hand__background {
+    position: absolute;
+    background: url('~images/content/hand.png') 
+    bottom left/ contain no-repeat;
+    bottom: -11%;
+    z-index: -1;
+    height: 80vw;
+    width: 50%;
+    max-height: 955px;
+    @include desktop {
+      left: -6.5%;
+      bottom: -8%;
+      width: 37%;
+    }
+    @include tablets {
+      background: url('~images/content/hand768.png') 
+    bottom center/ contain no-repeat;
+    width: 66%;
+    left: 16.5%;
+    bottom: 0%;
+    }
+    @include tablets {
+      width: 100%;
+      left: 0;
+    }
+}
+  
+.values__container {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    max-width: 1280px;
+    &:nth-child(3){
+      justify-content: flex-end;
+    }
+    @include tablets {
+      text-align: center;
+    }
+    @include phones {
+      width: 85%;
+    }
+}
+  
+.values__wrapper {
+    position: relative;
+}
+  
+.values__title {
+    margin-bottom: 50px;
+    max-width: 600px;
+    display: flex;
+    color: rgba($text-color, .8);
+    flex-direction: column;
+    align-items: center;
+    @include phones {
+      margin-bottom: 28px;
+    }
+}
+
+.values_container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.values__title-container {
+    width: 25%;
+    margin-left: 6%;
+}
+
+  
+.values__title-text {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 55px;
+    @include tablets {
+      width: 66vw;
+      font-size: 48px;
+      margin: 0 auto 28px;
+    }
+    @include phones {
+      font-size: 36px;
+      text-align: left;
+      width: 100%;
+    }
+}
+  
+.values__content {
+    color: rgba($text-color, .5);
+    font-weight: 600;
+    line-height: 1.8;
+    @include tablets {
+      font-size: 17px;
+    }
+    @include phones {
+      font-size: 18px;
+      text-align: justify;
+      width: 100%;
+    }
+}
+  
+.values__widget {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    @include desktop {
+      justify-content: flex-end;
+    }
+}
+
+.skill {
+    position: relative;
+    width: 166px;
+    height: 166px;
+    @include tablets {
+      width: 20vw;
+      height: 20vw;
+    }
+    @include phones {
+      width: 40vw;
+      height: 40vw;
+    }
+}
+  
+.skill__circle {
+    fill: transparent;
+  
+    &--layer--under {
+      stroke: rgba($text-color, .3);
+      stroke-width: 2px;
+    }
+  
+    &--layer--above {
+      stroke-width: 8px;
+      stroke-dasharray: 251;
+      stroke-dashoffset: 120;
+    }
+}
+  
+.skill__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 18px;
+    color: rgba($text-color, .5);
+    padding: 14px 5px;
+    text-align: center;
+    @include tablets {
+      font-size: 16px;
+    }
+}
+
+.skills__item {
+    margin-bottom: 30px;
+}
+
+.skills-row__title {
+    margin-bottom: 26px;
+    font-size: 24px;
+    font-weight: 700;
+    @include tablets {
+      text-align: center;
+      
+    }
+}
+  
+.skills-row__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -20px;
+}
+  
+.skills-row__item {
+    margin-left: 20px;
+}
+  
+  

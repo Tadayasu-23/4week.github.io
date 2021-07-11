@@ -1,0 +1,87 @@
+.quote {
+  max-width: 500px;
+  width: 100%;
+  padding-left: 15%;
+  position: relative;
+  
+  &:before {
+    content: "";
+    display: block;
+    width: 13%;
+    height: 27%;
+    opacity: .05;
+    background: svg-load('quote.svg', fill=$text-color) center center / contain no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @media(max-width: 1350px) {
+    padding-left: 13%;
+    &:before {
+      width: 12%;
+      height: 25%;
+    }
+  }
+
+  @include tablets {
+    padding-left: 9%;
+    &:before {
+      width: 8%;
+      height: 17%;
+    }
+  }
+
+  @include phones {
+    padding: 0;
+    margin: 0;
+    &:before { 
+      display:none; 
+    }
+  }
+}
+
+.quote__text {
+  margin-bottom: 30px;
+  color: rgba($text-color, .6);
+  font-weight: 600;
+  line-height: 1.8;
+
+  @include tablets {
+    max-width: 300px;
+    font-size: 14px;
+  }
+  @include phones {
+    font-size: 16px;
+    max-width: 400px;
+  }
+}
+
+.swiper-container {
+  @include phones {
+    height: 30vh;
+  }
+}
+
+.swiper-slide {
+  visibility: hidden;
+}
+
+.swiper-slide-active, .swiper-slide-next {
+  visibility: visible;
+  flex-basis: 500px;
+
+  @include tablets{
+    flex-basis: 350px;
+  }
+
+  @include phones {
+    flex-basis: 450px;
+  }
+}
+
+.swiper-slide-next {
+  @include phones {
+    visibility: hidden;
+  }
+}

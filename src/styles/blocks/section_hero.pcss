@@ -1,0 +1,164 @@
+.hero {
+    margin-bottom: 175px;
+    @include desktop {
+      margin-bottom: 400px;
+    }
+    @include tablets {
+      align-content: space-between;
+      margin-bottom: 70px;
+    }  
+}
+  
+.hero__container {
+    height: 100vh;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 60px 0 20px;
+    @include phones {
+      width: 80%;
+    }
+}
+  
+.hero__bottom-buttons {
+    display: flex;
+    justify-content: center;
+    @include tablets {
+      visibility: hidden;
+      flex: 1;
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include tablets {
+      /*margin: 0 0 70px 0;*/
+    }
+    @include phones {
+      margin: 0 0 210px 0;
+    }
+}
+
+.logo {
+  
+    font-weight: 800;
+    color: $text-infocus;
+    text-decoration: none;
+    font-size: 36px;
+    transition: color 0.7s ease;
+    width: 50px;
+    &:hover {
+      color: $text-color;
+    }
+    @include phones {
+      font-size: 48px;
+    }
+}
+
+.header {
+    .menu {
+      @include tablets {
+        display: none;
+      }
+    }
+}
+  
+  
+.menu--color-white {
+  
+    .menu__link {
+      color: #fff;
+    }
+}
+  
+.menu__list {
+    display: flex;
+    justify-content: center;
+    width: 450px;
+  
+}
+  
+.menu__item {
+    margin-right: 60px;
+  
+    &:last-child {
+      margin-right: 0;
+    }
+}
+  
+.menu__link {
+    text-decoration: none;
+    white-space: nowrap;
+    color: $text-infocus;
+    transition: color 0.7s ease;
+    &:hover {
+      color: $text-color;
+    }
+}
+
+.userinfo {
+    display: flex;
+    justify-content: center;
+    @include tablets {
+      flex-direction: column;
+      text-align: center;
+      flex: 3;
+    }
+}
+  
+.userinfo__title {
+    font-size: 18px;
+    color: rgba($text-color, .6);
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: right;
+    text-shadow: 1px 1px 10px black;
+    margin-right: 62px;
+    padding-top: 10px;
+    @include tablets {
+      text-align: center;
+      margin: 0 0 25px 0;
+    }
+}
+  
+.userinfo__occ {
+    white-space: nowrap;
+}
+  
+.userinfo__name {
+    font-weight: 800;
+    font-size: 72px;
+    line-height: 1;
+    flex-basis: 400px;
+    text-shadow: 2px 2px 5px black,
+    -1px 1px 2px black; 
+}
+
+.scroll-down-btn {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  overline: none;
+  border: 0;
+  background: transparent;
+  &:focus {
+    text-decoration: none;
+    overline: none;
+    border: 0;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    background: svg-load('scroll.svg', fill=$text-color, width=100%, height=100%) center center no-repeat;
+    width: 28px;
+    height: 30px;
+    margin-left: 20px;
+  }
+}
