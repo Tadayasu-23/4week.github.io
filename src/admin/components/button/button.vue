@@ -3,6 +3,7 @@
     :is="type"
     v-bind="$attrs"
     v-on="$listeners"
+    @activate-form="$emit('activate-form')"
   /> 
 </template>
 
@@ -11,7 +12,7 @@ export default {
   props: {
     type: {
       type: String,
-      default: "default"
+      default: "default",
     }
   },
   components: {

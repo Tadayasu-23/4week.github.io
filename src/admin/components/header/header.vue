@@ -11,7 +11,7 @@
 <script>
 import headline from "../../components/headline/headline.vue";
 import user from "../../components/user/user.vue";
-import navigation from "../../components/navigate/navigation.vue";
+import navigation from "../../components/navigation/navigation.vue";
 
 export default {
   components: {

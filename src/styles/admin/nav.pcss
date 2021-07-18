@@ -1,0 +1,40 @@
+
+.breadcrumbs {
+   margin-left: 60px;
+}
+
+.breadcrumbs__list {
+   display: flex;
+}
+
+.breadcrumbs__item {
+   display: flex;
+   justify-content: center;
+   width: 125px;
+   font-size: 16px;
+   font-weight: 600;
+   text-align: center;
+   color: #414c63;      
+   height: 60px;
+   white-space: nowrap;
+}
+
+.breadcrumbs__link {
+   height: 100%;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-bottom: 3px solid transparent;
+   transition: 0.3s;
+   
+   &:hover {
+      border-bottom: 3px solid #383bcf;
+      color: #383bcf;
+   }
+}
+
+.router-link-exact-active {
+   border-bottom: 3px solid #383bcf;
+   color: #383bcf;
+}

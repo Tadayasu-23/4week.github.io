@@ -6,6 +6,11 @@ Vue.use(VueRouter);
 import header from './components/header'
 import about from "./pages/about";
 import login from "./pages/login";
+import works from "./pages/works";
+import reviews from "./pages/reviews";
+import axios from "axios";
+
+
 
 const routes = [
   {
@@ -18,11 +23,28 @@ const routes = [
   {
     path: '/login',
     component: login,
+    meta: {
+      public: true
+    }
+  },
+  {
+    path: '/works',
+    components: {
+      default: works,
+      header: header
+    },
+  },
+  {
+    path: '/reviews',
+    components: {
+      default: reviews,
+      header: header
+    },
   }
 ];
 
 const baseURL = "https://webdev-api.loftschool.com";
-const loginPage = axios.create({ baseURL });
+const guard = axios.create({ baseURL });
 
 const router = new VueRouter({ routes });
 
@@ -31,10 +53,10 @@ router.beforeEach(async (to, from, next) => {
  
    if (isPublicRoute === false) {
      const token = localStorage.getItem('token');
-     loginPage.defaults.headers['Authorization'] = `Bearer ${token}`;
+     guard.defaults.headers['Authorization'] = `Bearer ${token}`;
  
      try {
-       await loginPage.get('/user');
+       await guard.get('/user');
        next(); 
      } catch (error) {
        router.replace('/login');

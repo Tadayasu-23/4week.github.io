@@ -1,5 +1,8 @@
 <template>
-  <button class="square-btn-component" type="button" v-on="$listeners">
+  <button class="square-btn-component" 
+          type="button" 
+          v-on="$listeners"
+          @click="$emit('activate-form')">
     <div class="text">
       <div class="sign"></div>
       <div class="title">{{title}}</div>

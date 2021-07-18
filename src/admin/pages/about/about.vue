@@ -44,12 +44,14 @@
 <script>
 import button from "../../components/button/button.vue";
 import category from "../../components/category/category.vue";
+import worksForm from "../../components/worksForm/worksForm.vue"
 import { mapActions, mapState } from "vuex";
 
 export default {
   components: {
     iconedButton: button,
-    category
+    category,
+    worksForm,
   },
   data() {
     return {
