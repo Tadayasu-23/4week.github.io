@@ -1,0 +1,11 @@
+{
+  "text-color": "#ffffff",
+  "text-color-alternate": "#000",
+  "text-infocus": "rgba(255, 255, 255, 0.5)",
+  "links-color": "#000",
+  "errors-color": "#cd1515",
+  "bp-desktop-hd": "1800px",
+  "bp-desktop": "1200px",
+  "bp-tablets": "768px",
+  "bp-phones": "480px"
+}
